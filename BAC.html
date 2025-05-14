@@ -14,8 +14,9 @@
         }
         
         :root {
-            --primary-color: #FF6B6B;
-            --secondary-color: #FFD166;
+            --primary-color: #2C5F2D; /* Deep green */
+            --secondary-color: #97BC62; /* Light green */
+            --accent-color: #E0D98C; /* Gold */
             --bg-color: #f8f9fa;
             --text-color: #333;
             --sidebar-width: 240px;
@@ -35,7 +36,7 @@
         .sidebar {
             width: var(--sidebar-width);
             height: 100vh;
-            background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+            background: linear-gradient(135deg, var(--primary-color) 0%, #1E3D1E 100%);
             position: fixed;
             left: 0;
             top: 0;
@@ -60,6 +61,7 @@
             font-size: 26px;
             font-weight: bold;
             letter-spacing: 1px;
+            color: var(--accent-color);
         }
         
         .sidebar-nav {
@@ -90,6 +92,7 @@
         .sidebar-menu i {
             width: 20px;
             text-align: center;
+            color: var(--accent-color);
         }
         
         .sidebar-divider {
@@ -147,7 +150,7 @@
         .toggle-btn {
             font-size: 24px;
             cursor: pointer;
-            color: var(--text-color);
+            color: var(--primary-color);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -158,12 +161,13 @@
         }
         
         .toggle-btn:hover {
-            background-color: rgba(0, 0, 0, 0.05);
+            background-color: rgba(44, 95, 45, 0.1);
         }
         
         .header-title {
             font-size: 18px;
             font-weight: 500;
+            color: var(--primary-color);
         }
         
         .header-actions {
@@ -175,13 +179,14 @@
         .action-btn {
             font-size: 20px;
             cursor: pointer;
-            color: var(--text-color);
+            color: var(--primary-color);
             opacity: 0.7;
             transition: var(--transition);
         }
         
         .action-btn:hover {
             opacity: 1;
+            color: var(--secondary-color);
         }
         
         /* Content Area Styles */
@@ -225,11 +230,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            border-left: 4px solid var(--primary-color);
         }
         
         .course-card:hover {
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            background-color: #f0f4f0;
         }
         
         .course-info {
@@ -255,31 +262,37 @@
             gap: 5px;
         }
         
+        .course-detail i {
+            color: var(--secondary-color);
+        }
+        
         .course-badge {
             padding: 6px 12px;
             border-radius: 20px;
             font-size: 12px;
             font-weight: 500;
+            background-color: var(--secondary-color);
+            color: white;
         }
         
         .badge-accounting {
-            background-color: rgba(255, 107, 107, 0.1);
-            color: #FF6B6B;
+            background-color: #2C5F2D;
+            color: white;
         }
         
         .badge-finance {
-            background-color: rgba(76, 175, 80, 0.1);
-            color: #4CAF50;
+            background-color: #5F9EA0;
+            color: white;
         }
         
         .badge-business {
-            background-color: rgba(33, 150, 243, 0.1);
-            color: #2196F3;
+            background-color: #4682B4;
+            color: white;
         }
         
         .badge-computing {
-            background-color: rgba(156, 39, 176, 0.1);
-            color: #9C27B0;
+            background-color: #6A5ACD;
+            color: white;
         }
         
         .hero-section {
@@ -291,12 +304,15 @@
             justify-content: center;
             padding: 40px;
             margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: var(--box-shadow);
         }
         
         .hero-title {
             font-size: 36px;
             font-weight: bold;
             margin-bottom: 15px;
+            color: var(--accent-color);
         }
         
         .hero-subtitle {
@@ -320,6 +336,11 @@
             display: flex;
             align-items: center;
             gap: 15px;
+            transition: var(--transition);
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
         }
         
         .stat-icon {
@@ -334,25 +355,26 @@
         }
         
         .icon-students {
-            background-color: #4ECDC4;
+            background-color: var(--primary-color);
         }
         
         .icon-programs {
-            background-color: #FF6B6B;
+            background-color: var(--secondary-color);
         }
         
         .icon-rating {
-            background-color: #FFD166;
+            background-color: var(--accent-color);
         }
         
         .icon-employment {
-            background-color: #9381FF;
+            background-color: #5F9EA0;
         }
         
         .stat-content h3 {
             font-size: 24px;
             font-weight: bold;
             margin-bottom: 5px;
+            color: var(--primary-color);
         }
         
         .stat-content p {
@@ -363,6 +385,7 @@
         .menu-arrow {
             margin-left: auto;
             transition: transform 0.3s ease;
+            color: var(--accent-color);
         }
         
         .menu-arrow.active {
