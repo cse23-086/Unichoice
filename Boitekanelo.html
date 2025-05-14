@@ -18,6 +18,23 @@
             display: flex;
             flex-direction: column;
             color: white;
+            position: relative;
+        }
+        
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(90deg, 
+                #d8b15d 0%, #d8b15d 20%, 
+                #c27c38 20%, #c27c38 40%, 
+                #1a3a3a 40%, #1a3a3a 60%, 
+                #2d6a4f 60%, #2d6a4f 80%, 
+                #d8b15d 80%, #d8b15d 100%);
+            z-index: 100;
         }
         
         .header {
@@ -25,7 +42,11 @@
             justify-content: space-between;
             align-items: center;
             padding: 1.5rem 3rem;
-            background-color: rgba(0, 0, 0, 0.2);
+            background-image: 
+                linear-gradient(rgba(0,0,0,0.2), 
+                rgba(0,0,0,0.2)),
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path fill="%23d8b15d" opacity="0.1" d="M50 0L100 50L50 100L0 50Z"/></svg>');
+            background-size: 80px;
             backdrop-filter: blur(5px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
@@ -78,6 +99,20 @@
             border-radius: 15px;
             padding: 2rem;
             border-left: 5px solid #c27c38;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .college-header::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path fill="%231a3a3a" d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25"/><path fill="%231a3a3a" d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5"/><path fill="%231a3a3a" d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"/></svg>');
+            background-size: cover;
+            z-index: 1;
         }
         
         .college-logo-container {
@@ -107,6 +142,8 @@
         
         .college-details {
             flex: 1;
+            position: relative;
+            z-index: 2;
         }
         
         .college-name {
@@ -152,7 +189,10 @@
         }
         
         .program-section {
-            background-color: rgba(0, 0, 0, 0.15);
+            background-image: 
+                linear-gradient(rgba(0,0,0,0.15), 
+                rgba(0,0,0,0.15)),
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="%23d8b15d" width="2" height="2" x="0" y="0" opacity="0.05"/><rect fill="%23d8b15d" width="2" height="2" x="4" y="4" opacity="0.05"/></svg>');
             border-radius: 15px;
             padding: 2rem;
         }
@@ -163,6 +203,13 @@
             color: white;
             position: relative;
             padding-bottom: 0.5rem;
+        }
+        
+        .section-title::before {
+            content: "◈";
+            color: #d8b15d;
+            margin-right: 10px;
+            font-size: 1.2rem;
         }
         
         .section-title::after {
@@ -182,7 +229,10 @@
         }
         
         .program-card {
-            background-color: rgba(0, 0, 0, 0.15);
+            background-image: 
+                linear-gradient(rgba(0,0,0,0.15), 
+                rgba(0,0,0,0.15)),
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="%23d8b15d" width="2" height="2" x="0" y="0" opacity="0.05"/><rect fill="%23d8b15d" width="2" height="2" x="4" y="4" opacity="0.05"/></svg>');
             border-radius: 12px;
             padding: 1.5rem;
             transition: all 0.3s ease;
@@ -265,7 +315,10 @@
         }
         
         .sidebar-section {
-            background-color: rgba(0, 0, 0, 0.15);
+            background-image: 
+                linear-gradient(rgba(0,0,0,0.15), 
+                rgba(0,0,0,0.15)),
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="%23d8b15d" width="2" height="2" x="0" y="0" opacity="0.05"/><rect fill="%23d8b15d" width="2" height="2" x="4" y="4" opacity="0.05"/></svg>');
             border-radius: 15px;
             padding: 1.5rem;
         }
@@ -320,6 +373,16 @@
             border-radius: 8px;
             overflow: hidden;
             margin-top: 1rem;
+            position: relative;
+        }
+        
+        .location-map::before {
+            content: "Map of Botswana";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgba(255,255,255,0.5);
         }
         
         .virtual-tour-section {
@@ -330,6 +393,18 @@
             border-radius: 15px;
             position: relative;
             overflow: hidden;
+        }
+        
+        .virtual-tour-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path fill="%23d8b15d" opacity="0.03" d="M20,20L80,20L80,80L20,80Z" stroke="%23d8b15d" stroke-width="2" stroke-opacity="0.1"/></svg>');
+            z-index: -1;
         }
         
         .tour-title {
@@ -437,6 +512,17 @@
             color: rgba(255, 255, 255, 0.7);
             background-color: rgba(0, 0, 0, 0.2);
             margin-top: 2rem;
+            position: relative;
+        }
+        
+        .footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #d8b15d, transparent);
         }
         
         .admission-cta {
@@ -449,10 +535,24 @@
             overflow: hidden;
         }
         
+        .admission-cta::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path fill="%23ffffff" opacity="0.05" d="M30,30Q50,20,70,30T90,50Q80,70,70,70T30,50Q20,30,30,30Z"/></svg>');
+            z-index: 0;
+        }
+        
         .cta-title {
             font-size: 2rem;
             margin-bottom: 1rem;
             color: white;
+            position: relative;
+            z-index: 1;
         }
         
         .cta-text {
@@ -462,12 +562,16 @@
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
+            position: relative;
+            z-index: 1;
         }
         
         .cta-buttons {
             display: flex;
             justify-content: center;
             gap: 1rem;
+            position: relative;
+            z-index: 1;
         }
         
         .cta-btn {
@@ -567,6 +671,19 @@
             margin-bottom: 0.5rem;
         }
         
+        .botswana-landscape {
+            width: 100%;
+            height: 200px;
+            background: 
+                linear-gradient(to bottom, rgba(26,58,58,0.3), rgba(26,58,58,0.7)), 
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><path fill="%232d6a4f" d="M0,256L48,261.3C96,267,192,277,288,250.7C384,224,480,160,576,160C672,160,768,224,864,218.7C960,213,1056,139,1152,117.3C1248,96,1344,128,1392,144L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>'),
+                linear-gradient(to bottom, #1a3a3a, #2d6a4f);
+            background-size: cover;
+            margin-bottom: 2rem;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
         @media (max-width: 1200px) {
             .content-area {
                 grid-template-columns: 1fr;
@@ -622,6 +739,10 @@
             .college-name {
                 font-size: 2rem;
             }
+            
+            .botswana-landscape {
+                height: 150px;
+            }
         }
     </style>
 </head>
@@ -639,6 +760,8 @@
     </header>
     
     <main class="main">
+        <div class="botswana-landscape"></div>
+        
         <section class="college-header">
             <div class="college-logo-container">
                 <div class="college-logo">BC</div>
